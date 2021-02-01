@@ -1,0 +1,43 @@
+alias wget_silent='wget -b -o /dev/null'
+
+if [[ $HOST = lense ]]; then
+	alias unison_sync='unison lense-light'
+fi
+
+alias ParentDirName='echo "${$(pwd)##*/}"'
+alias TouchParentDirName='touch "$(ParentDirName)"'
+
+alias myRedshift='redshift-gtk -l 49.5985:11.0035'
+
+alias sl="sl -e"
+
+alias qmv_new="qmv -o swap"
+
+alias color_diff="diff --color=always"
+
+alias icat="kitty +kitten icat"
+
+alias vim='nvim'
+
+## ask before overwriting files with mv/cp
+alias mv='mv -i'
+alias cp='cp -i'
+
+## A -> show hidden files, but not . and ..
+## a -> show hidden files
+## l -> show additional information for files
+## h -> show human readable file-size (1M instead of 1000000 bytes)
+## --color=auto color output with $LS_COLORS
+alias lA="ls -lAh --color=auto"
+alias la="ls -lah --color=auto"
+alias ll="ls -llh --color=auto"
+alias ls="ls --color=auto"
+alias l="ls -lh --color=auto"
+
+# Shorter movement
+alias -g ...='cd ..'
+
+## Connect to irc-server and attach tmux
+alias irc="ssh weechat -t 'command; tmux a'"
+# vim: ft=zsh
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
